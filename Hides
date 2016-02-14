@@ -1,0 +1,12 @@
+	else
+		{
+			iTimer--;
+			PrintHintTextToAll("[HNS] Time left to Hide %02i:%02i", iTimer / 60, iTimer % 60);
+			PrintCenterTextAll("[HNS] Time left to Hide %02i:%02i", iTimer / 60, iTimer % 60);
+			PrintHintTextToAll("[HNS] Si zmrazen na %02i:%02i", iTimer / 60, iTimer % 60);
+			PrintCenterTextAll("[HNS] si zmrazen na %02i:%02i", iTimer / 60, iTimer % 60);
+			ServerCommand("sm_blind @ct 5000");
+			ServerCommand("sv_maxspeed 0 @ct 5000");
+			ServerCommand("sv_maxspeed 250 @ct 5000");
+			opencells();
+			return Plugin_Continue;
